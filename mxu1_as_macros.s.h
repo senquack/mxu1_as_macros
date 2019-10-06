@@ -24,6 +24,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+################################################################################
+# FOR THE LATEST VERSION:
+# https://github.com/senquack/mxu1_as_macros
+#
+# Version 1.0 - October 6 2019
+#  Initial Public Release
+################################################################################
 
 ################################################################################
 #  These macros take the place of the unofficial patched Ingenic binutils, and
@@ -455,7 +462,7 @@
   MXU_CHECK_PATTERN \ptn, 0, 7
   .if (\imm8) < 0
     MXU_CHECK_BOUNDS \imm8, -128, 127
-  .else 
+  .else
     MXU_CHECK_BOUNDS \imm8, 0, 255
   .endif
   .word 0x70000027 | (MXU_PTN_\ptn << 23) | (3 << 18) | (((\imm8) & 0xff) << 10) | (MXU_\xra << 6)
