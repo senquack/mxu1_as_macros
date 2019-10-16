@@ -5,6 +5,7 @@
 # MIT License
 #
 # Copyright (c) 2019 Daniel Silsby (senquack)
+#                    dansilsby <AT> gmail <DOT> com
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +29,7 @@
 # FOR THE LATEST VERSION:
 # https://github.com/senquack/mxu1_as_macros
 #
-# Version 1.0 - October 6 2019
+# Version 1.0 - October 16 2019
 #  Initial Public Release
 ################################################################################
 
@@ -42,7 +43,7 @@
 #  1.) In a GAS .S or .s assembly file, add following at top of file:
 #      .include "mxu1_as_macros.s.h"
 #  2.) In a GCC C/C++ file using inline asm, add following at top of file:
-#      __asm__ __volatile__(".include \"mxu1_as_macros.s.h\" \n");
+#      asm (".include \"mxu1_as_macros.s.h\" \n");
 #
 #  Because of limitations in GAS macro expansion, and the fact that GAS MIPS
 # register names like '$a1' do not evaluate to integer expressions, you cannot
